@@ -1,0 +1,21 @@
+<html>
+
+<head>
+	<title>Shazam Song App</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+	<header>
+		<h1>Shazam Web App</h1>
+	</header>
+	<main>
+		<form action="/songSearchResults" method="POST">
+			<p>Enter a song <input type="text" name="Search Results" required /></p>
+			<p><input type="submit" value="Search" /></p>
+		</form>
+	</main>
+
+</body>
+
+</html>

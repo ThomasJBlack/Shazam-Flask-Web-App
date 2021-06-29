@@ -1,0 +1,24 @@
+<html>
+
+<head>
+	<title>Shazam Song App</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+	<h1>Search Results</h1>
+	<div class="songs">
+		{% for song in hits_list %}
+		<form class="song-elem" action=" /songRecomendations" method="POST">
+			<h2>{{song['track']['title']}} </h2>
+			<h3>By {{song['track']['subtitle']}}</h3>
+			<p><img class="coverart" src="{{song['track']['images']['coverart']}}" /> </p>
+			{% set key = song['track']['key'] %}
+			<p><input name="song_key" value={{key}} hidden /></p>
+			<p><input type="submit" value="View Recomendations" /></p>
+		</form>
+		{% endfor %}
+	</div>
+</body>
+
+</html>

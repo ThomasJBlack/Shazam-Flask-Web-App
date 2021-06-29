@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<title>Shazam Song App</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+	<h1>Song Recomendations</h1>
+
+	<form class="home-button-form" action="/" method="GET">
+		<input type="submit" value="Home" />
+	</form>
+	<div class="songs">
+		{% for song in tracks_list %}
+		<form class="song-elem">
+			<h2>{{song["title"]}} </h2>
+			<h3>By {{song["subtitle"]}}</h3>
+			{% if song["images"] %}
+			<p><img class="coverart" src='{{song["images"]["coverart"]}}' /> </p>
+			{% else %}
+			<p><img class="coverart" src='http://dalelyles.com/musicmp3s/no_cover.jpg' /> </p>
+			{% endif %}
+
+		</form>
+		{% endfor %}
+	</div>
+
+</body>
+
+</html>

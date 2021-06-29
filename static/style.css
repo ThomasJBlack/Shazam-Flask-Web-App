@@ -1,0 +1,39 @@
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0 30rem;
+
+	background-image: url();
+	text-align: center;
+	align-items: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+	justify-content: space-evenly;
+}
+
+.songs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+form {
+	width: 20rem;
+	height: 32rem;
+}
+
+.home-button-form {
+	height: 2rem;
+}
+
+.song-elem {
+	border: .1rem solid grey;
+	border-width: .1rem 0;
+}
+
+.coverart {
+	width: 20rem;
+	height: 20rem;
+}

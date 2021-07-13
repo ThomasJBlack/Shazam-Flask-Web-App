@@ -1,21 +1,28 @@
 <html>
 
 <head>
-	<title>Shazam Song App</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+	<title>Hospital Home Page</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
 </head>
 
 <body>
 	<header>
-		<h1>Shazam Web App</h1>
+		Dog Hospital Home Page
 	</header>
 	<main>
-		<form action="/songSearchResults" method="POST">
-			<p>Enter a song <input type="text" name="Search Results" required /></p>
-			<p><input type="submit" value="Search" /></p>
+		<form action="/dogs" method="POST">
+			<input type="submit" value="Dogs" />
+			<input name="updating_dog" value={{False}} hidden />
+		</form>
+		<form action="/doctors" method="POST">
+			<input type="submit" value="Doctors" />
+			<input name="updating_dog" value={{False}} hidden />
+		</form>
+		<form action="/maladies" method="POST">
+			<input type="submit" value="Maladies" />
+			<input name="updating_dog" value={{False}} hidden />
 		</form>
 	</main>
-
 </body>
 
 </html>
